@@ -1,0 +1,251 @@
+.get {
+  background-color: var(--yellow-bg-color);
+  padding-top: 64px;
+  padding-bottom: 61px;
+  .conteiner {
+    max-width: 792px;
+    padding: 0px 15px;
+    margin: 0px auto;
+  }
+}
+.get__text {
+  font-size: 18px;
+  line-height: 29px;
+  text-align: center;
+  color: var(--shadow-grey-color);
+}
+.modal-container {
+  margin-top: 40px;
+  text-align: center
+}
+.get-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 34px;
+  border: 1px solid var(--shadow-grey-color);
+  background-color: var(--yellow-bg-color);
+  box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.25);
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--shadow-grey-color);
+  cursor: pointer;
+  transition: all 1s ease;
+}
+.get-modal {
+  position: fixed;
+  z-index: 10;
+  padding-top: 12%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,.5);
+  cursor: default;
+}
+.get-modal__content {
+  position: relative;
+  padding-top: 64px;
+  padding-bottom: 88px;
+  margin: auto;
+  background-color: var(--modal-ligth-green-bg);
+  width: 34.8%;
+  border-radius: 8px;
+  animation-name: animatetop;
+  animation-duration: 1s;
+
+  #modalLogo {
+    margin: 0 auto;
+    width: 37%;
+  }
+
+  p {
+    margin-top: 15px;
+    font-family: "Montserrat";
+    font-size: 23px;
+    line-height: 36px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+#modalClose {
+  position: absolute; 
+  top: 15px; 
+  right: 15px;
+  padding: 4px;
+  border-radius: 3px;
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--mint-color);
+  text-transform: lowercase;
+  color: var(--white-color);
+  border: none;
+  cursor: pointer;
+  transition: all 1s ease; 
+}
+@keyframes animatetop {
+  from {
+    top: -300px; 
+    opacity: 0;
+  }
+  to {
+    top: 0; 
+    opacity: 1;
+  }
+}
+#form2 {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  
+  input {
+    width: 60%;
+    padding: 15px;
+    outline-style: none;
+    background-color: inherit;
+    border: 1px solid var(--mint-color);
+    border-right: none;
+    border-radius: 8px 0 0 8px;
+  }
+  ::placeholder {
+    color:  var(--placeholder-grey-color);
+  }
+  button {
+    width: 30%;
+    align-self: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 47px;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    background-color: var(--mint-color);
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--white-color);
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+  }
+}
+//---@media-get----------------------
+@media (hover: hover) and (pointer: fine) {
+  .get-button:hover {
+    box-shadow: none;
+  }
+}
+@media (hover: none) {
+  .get-button:active {
+    box-shadow: none;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  #modalClose:hover {
+    color: var(--shadow-grey-color);
+  }
+}
+@media (hover: none) {
+  #modalClose:active {
+    color: var(--shadow-grey-color);
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  #form2 button:hover {
+    color: var(--shadow-grey-color);
+  }
+}
+@media (hover: none) {
+  #form2 button:active {
+    color: var(--shadow-grey-color);
+  }
+}
+@media(max-width: 1440px) {
+  .get-modal__content {
+    width: 502px;
+  }
+}
+@media(max-width: 768px) {
+  .get-modal {
+    padding-top: 31%;
+  }
+  #form2 input {
+    font-size: calc(13px + (15 - 13)*((100vw - 320px)/(768 - 320)));
+    line-height: calc(13px + (15 - 13)*((100vw - 320px)/(768 - 320)));
+    padding: calc(9px + (15 - 9)*((100vw - 320px)/(768 - 320)));
+  }
+  #form2::placeholder {
+    font-size: calc(13px + (15 - 13)*((100vw - 320px)/(768 - 320)));
+    line-height: calc(13px + (15 - 13)*((100vw - 320px)/(768 - 320)));
+  }
+  #form2 button {
+    padding-top: calc(14px + (20 - 14)*((100vw - 320px)/(768 - 320)));
+    padding-bottom: calc(14px + (20 - 14)*((100vw - 320px)/(768 - 320)));
+    font-size: calc(11px + (14 - 11)*((100vw - 320px)/(768 - 320)));
+    line-height: calc(11px + (14 - 11)*((100vw - 320px)/(768 - 320)));
+  }
+  .get-modal__content {
+    width: calc(300px + (502 - 300)*((100vw - 320px)/(768 - 320)));
+    padding-bottom: calc(51px + (88 - 51)*((100vw - 320px)/(768 - 320)));
+  }
+  .get-modal__content p {
+    margin-top: calc(9px + (15 - 9)*((100vw - 320px)/(768 - 320)));
+    font-size: calc(14px + (23 - 14)*((100vw - 320px)/(768 - 320)));
+    line-height: calc(24px + (36 - 24)*((100vw - 320px)/(768 - 320)));
+  }
+  #modalClose {
+    gap: calc(10px + (20 - 10)*((100vw - 320px)/(768 - 320)));
+    font-size: calc(11px + (15 - 11)*((100vw - 320px)/(768 - 320)));
+    
+    img {
+      width: calc(11px + (24 - 11)*((100vw - 320px)/(768 - 320)));
+    }
+  }
+}
+@media(max-width: 970px) {
+  .get {
+    padding-top: calc(30px + (64 - 30)*((100vw - 320px)/(970 - 320)));
+    padding-bottom: calc(28px + (61 - 28)*((100vw - 320px)/(970 - 320)));
+  }
+  .get__text {
+    font-size: calc(14px + (18 - 14)*((100vw - 320px)/(970 - 320)));
+    line-height: calc(24px + (29 - 24)*((100vw - 320px)/(970 - 320)));
+  }
+  .modal-container {
+    margin-top: calc(17px + (40 - 17)*((100vw - 320px)/(970 - 320)));
+  }
+  .get-button {
+    padding-top: calc(8px + (13 - 8)*((100vw - 320px)/(970 - 320)));
+    padding-right: calc(23px + (34 - 23)*((100vw - 320px)/(970 - 320)));
+    padding-bottom: calc(8px + (13 - 8)*((100vw - 320px)/(970 - 320)));
+    padding-left: calc(23px + (34 - 23)*((100vw - 320px)/(970 - 320)));
+    font-size: calc(11px + (16 - 11)*((100vw - 320px)/(970 - 320)));
+    line-height: calc(16px + (20 - 16)*((100vw - 320px)/(970 - 320)));
+  }
+}
+@media (orientation: landscape) and (max-height: 500px)  {
+  .get-modal {
+    padding-top: 11%;
+  }
+  .get-modal__content {
+    padding-top: 40px;
+    padding-bottom: 37px;
+  }
+}
+@media (orientation: landscape) and (max-height: 375px)  {
+  .get-modal {
+   padding-top: 6%;
+  }
+}
+@media (orientation: landscape) and (max-height: 320px) and (max-width: 480px) {
+  .get-modal {
+   padding-top: 14%;
+  }
+}
+
+
+
