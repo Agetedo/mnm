@@ -54,10 +54,10 @@
     margin-top: calc(12px + (25 - 12)*((100vw - 320px)/(970 - 320)));
   }
 }
-@media only screen and (max-height: 500px)  {
+@media (orientation: landscape) and (max-height: 500px)  {
   .representation {
     padding-top: 62px;
     padding-bottom: 0px;
-    height: 100vh;
+    height:calc(100vh - 100px);
   }
 }
