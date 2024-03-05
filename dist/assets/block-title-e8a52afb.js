@@ -1,1 +1,0 @@
-import{j as e}from"./index-1c09b2cd.js";function s(){return e.jsx(e.Fragment,{children:e.jsx("hr",{className:"title__line"})})}function n({title:t}){return e.jsxs("div",{className:"title",children:[e.jsx("h2",{children:t}),e.jsx(s,{})]})}export{n as B};
