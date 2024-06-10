@@ -1,8 +1,8 @@
 # [mnm-agency](https://mnm-agency.netlify.app/)
 
 - React(Hooks), Vite
-- react-router-dom(createBrowserRouter)
 - react-dom
+- react-router-dom(createBrowserRouter)
 - eslint
 - Swiper
 - Sass(scss)
