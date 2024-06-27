@@ -1,4 +1,4 @@
-# [mnm-agency](https://mnm-ts.netlify.app/) <<< link to this project
+# [mnm-agency](https://mnm-ts.netlify.app/) <<< deploy
 
 - React(Hooks), TypeScript, Vite
 - react-dom
