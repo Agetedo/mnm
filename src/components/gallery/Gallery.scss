@@ -1,0 +1,91 @@
+.gallery {
+  background-color: var(--ligth-grey-bg-color);
+  padding-top: 69px;
+  padding-bottom: 69px;
+}
+.gallery-items {
+  margin-top: 43px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 20px;
+}
+.gallery-project {
+  justify-self: center;
+  background-color: var(--white-color);
+  a img {
+    filter: grayscale(1);
+    transition: filter 5s ease-in-out;
+  }
+}
+.project-caption {
+  padding: 20px 5px 20px 5px;
+
+  .title .caption-link {
+    margin-bottom: 4px;
+    font-family: 'Montserrat';
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 1s ease;
+  }
+  p {
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: var(--mint-color);
+  }
+}
+//---@media-gallery------------------
+@media (hover: hover) and (pointer: fine) {
+  .gallery-project a img:hover {
+    filter: none;
+    transition: all 1s ease;
+  }
+}
+@media (hover: none) {
+  .gallery-project a img:active {
+    filter: none;
+    transition: all 1s ease;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .project-caption .title .caption-link:hover {
+    color: var(--mint-color);
+  } 
+}
+@media (hover: none) {
+  .project-caption .title .caption-link:active {
+    color: var(--mint-color);
+  } 
+}
+@media(max-width: 970px) {
+  .gallery {
+    padding-top: calc(32px + (69 - 32)*((100vw - 320px)/(970 - 320)));
+    padding-bottom: calc(32px + (69 - 32)*((100vw - 320px)/(970 - 320)));
+  }
+  .gallery-items {
+    margin-top: calc(26px + (43 - 26)*((100vw - 320px)/(970 - 320)));
+    gap: calc(10px + (20 - 10)*((100vw - 320px)/(970 - 320))); 
+  }
+  .project-caption {
+    padding-top: calc(8px + (20 - 8)*((100vw - 320px)/(970 - 320)));
+    padding-bottom: calc(8px + (20 - 8)*((100vw - 320px)/(970 - 320)));
+  }
+  .project-caption .title .caption-link {
+    font-size: calc(12px + (16 - 12)*((100vw - 320px)/(970 - 320)));
+    line-height: calc(16px + (20 - 16)*((100vw - 320px)/(970 - 320)));
+  }
+  .project-caption p {
+    font-size: calc(12px + (14 - 12)*((100vw - 320px)/(970 - 320)));
+    line-height: calc(16px + (20 - 16)*((100vw - 320px)/(970 - 320)));
+  }
+}
+@media(max-width: 414px) {
+  .gallery-items {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+}

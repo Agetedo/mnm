@@ -1,0 +1,56 @@
+.representation {
+  padding-top: 106px;
+  padding-bottom: 100px;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  .title {
+    max-width: 672px;
+    margin: 0 auto 28px auto;
+    font-family: 'Montserrat';
+    font-size: 44px;
+    line-height: 55px;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--white-color);
+  }
+  .line {
+    color: var(--white-color);
+    background-color: var(--white-color);
+    border: 0px none;
+    width: 80px;
+    height: 2px; 
+    clear: both; 
+    margin: 0 auto;
+  }
+  .text {
+    margin-top: 25px;
+    line-height: 20px;
+    text-align: center;
+    color: var(--white-color);
+  }
+}
+//---@media-representation--------------
+@media(max-width: 970px) {
+  .representation .title {
+    font-size: calc(18px + (44 - 18)*((100vw - 320px)/(970 - 320)));
+    line-height: calc(32px + (55 - 32)*((100vw - 320px)/(970 - 320)));
+    margin-bottom: calc(12px + (28 - 12)*((100vw - 320px)/(970 - 320)));
+  }
+  .representation .line {
+    width: calc(47px + (80 - 47)*((100vw - 320px)/(970 - 320)));
+    height: calc(1px + (2 - 1)*((100vw - 320px)/(970 - 320)));
+  }
+  .representation .text {
+    font-size: calc(12px + (15 - 12)*((100vw - 320px)/(970 - 320)));
+    line-height: calc(16px + (20 - 16)*((100vw - 320px)/(970 - 320)));
+    margin-top: calc(12px + (25 - 12)*((100vw - 320px)/(970 - 320)));
+  }
+}
+@media (orientation: landscape) and (max-height: 500px)  {
+  .representation {
+    padding-top: 62px;
+    padding-bottom: 0px;
+    height: 100vh;
+  }
+}
