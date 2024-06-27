@@ -1,0 +1,1 @@
+import{j as e}from"./index-Bx6Af127.js";function s({className:r,imageUrl:n,children:t}){return e.jsx("div",{className:r,style:{backgroundImage:`url("${n}")`},children:e.jsx("div",{className:"conteiner",children:t})})}export{s as C};
